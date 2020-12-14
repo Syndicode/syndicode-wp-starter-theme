@@ -5,4 +5,5 @@ function crb_load() {
 }
 
 add_action( 'after_setup_theme', 'crb_load' );
-add_filter( 'carbon_fields_user_meta_container_admin_only_access', '__return_false' );
+
+require_once get_template_directory() . '/inc/carbon-fields/post-type-page.php';
