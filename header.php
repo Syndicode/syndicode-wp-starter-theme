@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Starter theme
  * @since 1.0.0
  */
 ?>
@@ -19,4 +19,5 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+	<?php wp_body_open(); ?>
+	<?php get_template_part( 'template-parts/header/site-header' ); ?>
