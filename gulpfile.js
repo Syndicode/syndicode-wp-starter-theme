@@ -44,9 +44,9 @@ function styles() {
     }).on('error', $.sass.logError))
     .pipe($.postcss(postCssPlugins))
     .pipe($.if(!isProd, $.sourcemaps.write()))
-    .pipe($.if(isProd, $.rename({
+    .pipe($.rename({
       suffix: ".min"
-    })))
+    }))
     .pipe(dest('assets/styles'));
 }
 
@@ -123,7 +123,7 @@ function watcher() {
 
 let serve;
 if (isDev) {
-  serve = series(clean, parallel(styles, scripts, fonts), watcher);
+  serve = series(clean, parallel(styles, scripts, fonts, images), watcher);
 } else if (isProd) {
   serve = build;
 }
