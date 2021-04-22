@@ -1,7 +1,8 @@
 <?php
 return [
-	'taxonomy' => 'taxonomy',
-	'args'     => [
+	'taxonomy'    => 'taxonomy',
+	'object_type' => '',
+	'args'        => [
 		'label'                 => 'taxonomy',
 		'labels'                => [
 			'name'              => __( '', 'starter-theme' ),

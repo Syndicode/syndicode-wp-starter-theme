@@ -10,7 +10,7 @@ function register_taxonomies() {
 
 	foreach ( $taxonomies as $taxonomy ) {
 		if ( isset( $taxonomy['taxonomy'] ) && isset( $taxonomy['args'] ) ) {
-			register_taxonomy( $taxonomy['taxonomy'], '', $taxonomy['args'] );
+			register_taxonomy( $taxonomy['taxonomy'], $taxonomy['object_type'], $taxonomy['args'] );
 		}
 	}
 }
