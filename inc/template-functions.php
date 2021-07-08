@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'adp_setup' ) ) {
+if ( ! function_exists( 'starter_theme_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -17,7 +17,7 @@ if ( ! function_exists( 'adp_setup' ) ) {
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
          */
-		load_theme_textdomain( 'adp', TEMPLATE_DIR . '/languages' );
+		load_theme_textdomain( 'starter-theme', TEMPLATE_DIR . '/languages' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -94,9 +94,8 @@ if ( ! function_exists( 'adp_setup' ) ) {
 		 */
 		register_nav_menus(
 			[
-				'primary'  => esc_html__( 'Primary menu', 'adp' ),
-				'resource' => esc_html__( 'Resource menu', 'adp' ),
-				'footer'   => esc_html__( 'Footer menu', 'adp' ),
+				'primary'  => esc_html__( 'Primary menu', 'starter-theme' ),
+				'footer'   => esc_html__( 'Footer menu', 'starter-theme' ),
 			]
 		);
 
